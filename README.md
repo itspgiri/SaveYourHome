@@ -1,9 +1,8 @@
 # SaveYourHome
-A website to spread awareness about the environment.
+An initative to increase awarness about the numerous enviormental issues that have been rising.
 
 Link for GitHub Pages: https://itspgiri.github.io/SaveYourHome/
 Preview: 
-![HomePage] https://prnt.sc/1qgsojy
-<img> https://prnt.sc/1qgsojy</img>
+![HomePage] (/assets/images/Website HomePage.png)
 
 Technical Stack: Git, HTML, CSS and JavaScript
