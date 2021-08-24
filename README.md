@@ -4,4 +4,4 @@ An initative to *increase awarness* about the numerous enviormental issues that 
 
 ![HomePage](https://github.com/itspgiri/SaveYourHome/blob/main/assets/images/Website%20HomePage.png)
 
-Dated: 24th August 2021
+**Dated:** 24th August 2021
