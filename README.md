@@ -1,8 +1,7 @@
-# SaveYourHome
-An initative to increase awarness about the numerous enviormental issues that have been rising.
+# SaveYourHome 
+An initative to *increase awarness* about the numerous enviormental issues that have been rising. Let us work together to save your home, our home together.<br>
+**Link for GitHub Pages:** https://itspgiri.github.io/SaveYourHome/
 
-Link for GitHub Pages: https://itspgiri.github.io/SaveYourHome/
-Preview: 
-![HomePage](assets/images/Website HomePage.png)
+![HomePage](blob/main/assets/images/Website%20HomePage.png)
 
-Technical Stack: Git, HTML, CSS and JavaScript
+Dated: 24th August 2021
