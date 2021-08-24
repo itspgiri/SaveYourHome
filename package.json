@@ -1,0 +1,28 @@
+{
+  "name": "saveyourhome",
+  "version": "1.0.0",
+  "description": "An initative to *increase awarness* about the numerous enviormental issues that have been rising. Let us work together to save your home, our home together.<br>\r **Link for GitHub Pages:** https://itspgiri.github.io/SaveYourHome/",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itspgiri/SaveYourHome.git"
+  },
+  "keywords": [
+    "Save",
+    "Water",
+    "Earth"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itspgiri/SaveYourHome/issues"
+  },
+  "homepage": "https://github.com/itspgiri/SaveYourHome#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
+}
