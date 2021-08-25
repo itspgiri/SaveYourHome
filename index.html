@@ -26,9 +26,9 @@
 <body>
   <header class="header">
     <div class="branding">
-      <div class="container-fluid position-relative py-3">
+      <div class="container-fluid position-relative py-3 px-5 mx-5">
         <div class="logo-wrapper">
-          <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/site-logo.svg" alt="logo"><span class="logo-text">SaveYourHome</span></a></div>
+          <div class="site-logo"><a class="navbar-brand" href="/"><img class="logo-icon me-2" src="assets/images/site-logo.svg" alt="logo"><span class="logo-text">SaveYourHome</span></a></div>
         </div>
         <!--//docs-logo-wrapper-->
 
@@ -40,9 +40,9 @@
   <!--//header-->
 
   <section class="hero-section">
-    <div class="container">
+    <div class="container pb-5">
       <div class="row">
-        <div class="col-12 col-md-7 pt-5 mb-5 align-self-center">
+        <div class="col-12 col-md-7 pt-5 align-self-center">
           <div class="promo pe-md-3 pe-lg-5">
             <h1 class="headline mb-3">
               Protect our,<br>Mother Earth.
@@ -50,27 +50,27 @@
             <!--//headline-->
             <div class="subheadline mb-4">
               Sign up to our newsletter to recieve weekly guides on how we can make a change!
-
             </div>
-            <!--//subheading-->
-
-            <div class="cta-holder row gx-md-3 gy-3 gy-md-0">
-              <div class="col-12 col-md-auto">
-                <a class="btn btn-primary w-100" href="#Subscribe">Subscribe</a>
-              </div>
-              <div class="col-12 col-md-auto">
-                <a class="btn btn-secondary scrollto w-100" href="#learn-more">Learn More</a>
-              </div>
+            <div class="form-wrapper mx-auto">
+              <form class="signup-form row g-2 mb-3 align-items-center" action="/" method="POST">
+                <div class="col-12 col-lg-9">
+                  <label class="sr-only" for="semail">Email</label>
+                  <input type="email" id="semail" name="email" class="form-control me-md-1 semail" placeholder="Your email">
+                </div>
+                <div class="col-12 col-lg-3">
+                  <button type="submit" class="btn btn-primary btn-submit w-100">Subscribe</button>
+                </div>
+                <div class="col-12">
+                    <span id="newhidden">You've been successfully subscribed.</span>
+                </div>
+              </form>
             </div>
+
             <!--//cta-holder-->
 
-            <div class="hero-quotes mt-5">
-              <div id="quotes-carousel" class="quotes-carousel carousel slide carousel-fade mb-5" data-bs-ride="carousel" data-bs-interval="8000">
-                <ol class="carousel-indicators">
-                  <li data-bs-target="#quotes-carousel" data-bs-slide-to="0" class="active"></li>
-                  <li data-bs-target="#quotes-carousel" data-bs-slide-to="1"></li>
-                  <li data-bs-target="#quotes-carousel" data-bs-slide-to="2"></li>
-                </ol>
+            <div class="hero-quotes mt-3 pb-4">
+              <div id="quotes-carousel" class="quotes-carousel carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="8000">
+                
 
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -141,7 +141,7 @@
           <!--//promo-->
         </div>
         <!--col-->
-        <div class="col-12 col-md-5 mb-5 align-self-center">
+        <div class="col-12 col-md-5 pt-4 align-self-center">
           <div class="book-cover-holder">
             <img class="img-fluid book-cover" src="assets/images/devbook-cover.png" alt="book cover">
             <div class="book-badge d-inline-block shadow">
@@ -158,31 +158,6 @@
     <!--//container-->
   </section>
   <!--//hero-section-->
-
-  <section id="Subscribe" class="form-section">
-    <div class="container">
-      <div class="lead-form-wrapper single-col-max mx-auto theme-bg-light rounded p-5">
-        <h2 class="form-heading text-center">Sign up for our Newsletter</h2>
-        <div class="form-intro text-center mb-3">Let's stay in touch and talk more about how <br>we can make a difference.</div>
-        <div class="form-wrapper mx-auto">
-          <form class="signup-form row g-2 align-items-center">
-            <div class="col-12 col-lg-9">
-              <label class="sr-only" for="semail">Email</label>
-              <input type="email" id="semail" name="semail1" class="form-control me-md-1 semail" placeholder="Your email">
-            </div>
-            <div class="col-12 col-lg-3">
-              <button type="submit" class="btn btn-primary btn-submit w-100">Send</button>
-            </div>
-          </form>
-          <!--//signup-form-->
-        </div>
-        <!--//form-wrapper-->
-      </div>
-      <!--//lead-form-wrapper-->
-    </div>
-    <!--//container-->
-  </section>
-  <!--//form-section-->
 
 
   <section id="learn-more" class="benefits-section theme-bg-light-gradient py-5">
@@ -207,7 +182,7 @@
         <div class="item col-12 col-md-6 col-lg-4">
           <div class="item-inner p-3 p-lg-4">
             <div class="item-header mb-3">
-              <h3 class="item-heading">Invest A In A Reusable Water Bottle And / Or Coffee Cup</h3>
+              <h3 class="item-heading">Invest In A Reusable Water Bottle And / Or Coffee Cup</h3>
             </div>
             <!--//item-heading-->
             <div class="item-desc">
@@ -336,7 +311,30 @@
   <script src="assets/plugins/smoothscroll.min.js"></script>
 
   <script src="assets/js/main.js"></script>
-
+  <script defer>
+    const queryString = window.location.search; const urlParams = new URLSearchParams(queryString); 
+    const error = urlParams.get('error');  
+    console.log(error);
+    const doc = document.getElementById("newhidden");
+    if(error === "none") {
+      doc.innerHTML = "You've been successfully subscribed.";
+      doc.style.color = "#198754";
+      doc.style.visibility = "visible";
+    } 
+    else if (error === "exists"){
+      doc.innerHTML = "You're already subscribed.";
+      doc.style.color = "#dc3545";
+      doc.style.visibility = "visible";
+    }
+    else if (error === "fake"){
+      doc.innerHTML = "Email might be fake. Please try another email.";
+      doc.style.color = "#dc3545";
+      doc.style.visibility = "visible";
+    }
+    else {
+      doc.style.visibility = "hidden";
+    }
+  </script>
 </body>
 
 </html>

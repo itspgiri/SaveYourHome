@@ -540,7 +540,7 @@ progress {
 
 .img-fluid {
   max-width: 100%;
-  height: auto
+  /* height: auto */
 }
 
 .img-thumbnail {
@@ -11946,6 +11946,10 @@ a.theme-link:hover {
   max-width: 760px
 }
 
+.logo-text{
+  font-family: 'Quicksand', sans-serif;
+}
+
 .site-logo .logo-text {
   color: #1c1e2e;
   font-size: 1.5rem;
@@ -11962,6 +11966,10 @@ a.theme-link:hover {
 
 .section-intro {
   font-size: 1.25rem
+}
+
+.hero-section {
+  min-height: 90vh;
 }
 
 .hero-section .headline {
@@ -12119,7 +12127,6 @@ a.theme-link:hover {
 }
 
 .author-section .author-pic {
-  width: 150px;
   height: 150px
 }
 
@@ -12198,4 +12205,33 @@ a.theme-link:hover {
   .form-inline .form-control {
     width: 400px
   }
+}
+
+h90 {
+  /* min-height: 90vh; */
+  min-height:90vh;
+}
+
+.hero-quotes {
+  height:10rem !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #599191;
+}
+
+#newhidden {
+  color: var(--bs-green);
 }
