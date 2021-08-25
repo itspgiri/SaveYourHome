@@ -29,8 +29,9 @@ app.post("/", function(req, res) {
 
 
     const jsonData = JSON.stringify(data);
-    const url = "https://us5.api.mailchimp.com/3.0/lists/b135f2c601?skip_merge_validation=true&skip_duplicate_check=false";
     const apikey = process.env.API_KEY;
+    const listid = process.env.LIST_ID;
+    const url = "https://us5.api.mailchimp.com/3.0/lists/" + listid + "?skip_merge_validation=true&skip_duplicate_check=false";
     const options = {
         method: "POST",
         auth: "proximity220:" + apikey
